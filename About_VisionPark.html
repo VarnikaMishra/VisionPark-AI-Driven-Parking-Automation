@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VisionPark - AI Driven Parking Automation</title>
+    <!-- Load Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        /* Import Inter font and apply a base dark theme */
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #0d1117; /* Dark background */
+            color: #c9d1d9; /* Light text */
+        }
+        .header-bg {
+            background-image: linear-gradient(to right, rgba(16, 185, 129, 0.1), rgba(0, 0, 0, 0));
+        }
+    </style>
+</head>
+<body class="antialiased">
+
+    <!-- Header / Navigation -->
+    <header class="p-4 border-b border-gray-700 header-bg sticky top-0 z-10 backdrop-blur-sm bg-[#0d1117]/80">
+        <div class="max-w-7xl mx-auto flex justify-between items-center">
+            <h1 class="text-xl font-bold text-teal-400">VisionPark</h1>
+            <nav>
+                <a href="#process" class="text-sm font-medium hover:text-teal-400 mr-4 transition duration-200">Process</a>
+                <a href="#tech" class="text-sm font-medium hover:text-teal-400 mr-4 transition duration-200">Tech Stack</a>
+                <a href="#scale" class="text-sm font-medium hover:text-teal-400 transition duration-200">Scalability</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="py-16 md:py-24 text-center">
+        <div class="max-w-4xl mx-auto px-6">
+            <span class="text-xs font-semibold uppercase tracking-widest text-teal-500">Seekh Expo Project</span>
+            <h2 class="mt-4 text-4xl md:text-6xl font-extrabold text-white leading-tight">
+                VisionPark - AI Driven Parking Automation: <span class="text-teal-400">Cost-Effective & Infinitely Scalable</span>
+            </h2>
+            <p class="mt-6 text-lg text-gray-400 max-w-2xl mx-auto">
+                We've built a full-cycle automated parking management system using low-cost hardware and open-source Computer Vision (EasyOCR) to solve real-world infrastructure problems.
+            </p>
+            <a href="#process" class="mt-8 inline-block bg-teal-600 hover:bg-teal-500 text-white font-semibold py-3 px-8 rounded-full shadow-lg transition duration-300">
+                See How It Works
+            </a>
+        </div>
+    </section>
+
+    <!-- Project Process Section -->
+    <section id="process" class="py-16 bg-gray-900/50 border-t border-b border-gray-800">
+        <div class="max-w-7xl mx-auto px-6">
+            <h3 class="text-3xl font-bold text-center text-white mb-12">The 3-Step Automated Process</h3>
+            
+            <div class="grid md:grid-cols-3 gap-8">
+                
+                <!-- Step 1: Entry Trigger -->
+                <div class="flex flex-col items-center p-6 bg-gray-800 rounded-xl shadow-2xl hover:bg-gray-700/50 transition duration-300">
+                    <div class="w-12 h-12 bg-teal-600 rounded-full flex items-center justify-center text-xl font-bold text-white mb-4">1</div>
+                    <h4 class="text-xl font-semibold text-white mb-3">Entry Trigger & Acquisition</h4>
+                    <p class="text-gray-400 text-center">A simple IR sensor is broken by the vehicle, triggering the low-cost camera to capture a plate image. The Arduino sends an instant serial command (`ENTRY:0`) to the host system.</p>
+                </div>
+
+                <!-- Step 2: ANPR & State Management -->
+                <div class="flex flex-col items-center p-6 bg-gray-800 rounded-xl shadow-2xl hover:bg-gray-700/50 transition duration-300">
+                    <div class="w-12 h-12 bg-teal-600 rounded-full flex items-center justify-center text-xl font-bold text-white mb-4">2</div>
+                    <h4 class="text-xl font-semibold text-white mb-3">Vision & Decision Making</h4>
+                    <p class="text-gray-400 text-center">The Python script uses **EasyOCR** to recognize the plate number, logs the timestamp, checks global parking capacity, and sends the 'Open' command back to the Arduino.</p>
+                </div>
+
+                <!-- Step 3: Exit & Dynamic Billing -->
+                <div class="flex flex-col items-center p-6 bg-gray-800 rounded-xl shadow-2xl hover:bg-gray-700/50 transition duration-300">
+                    <div class="w-12 h-12 bg-teal-600 rounded-full flex items-center justify-center text-xl font-bold text-white mb-4">3</div>
+                    <h4 class="text-xl font-semibold text-white mb-3">Exit, Billing & Recalculation</h4>
+                    <p class="text-gray-400 text-center">On exit, the system calculates the exact duration and applies a **customizable, tiered fare structure** (Python's `calculate_fare`). Capacity is then restored.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Technology Stack Section -->
+    <section id="tech" class="py-16">
+        <div class="max-w-7xl mx-auto px-6">
+            <h3 class="text-3xl font-bold text-center text-white mb-12">The Integrated Tech Stack</h3>
+            
+            <div class="grid md:grid-cols-4 gap-6 text-center">
+                
+                <div class="p-4 border-b-4 border-teal-500 rounded-lg bg-gray-800">
+                    <svg class="w-10 h-10 text-teal-400 mx-auto mb-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 3v2m6-2v2M9 19v2m6-2v2M5 10v6m14-6v6m-4-8v8m-6-4h.01M12 10h.01M12 14h.01M12 18h.01"></path></svg>
+                    <p class="font-semibold text-white">Python</p>
+                    <p class="text-sm text-gray-400">Core decision-making engine & API gateway (includes **OpenCV** for security).</p>
+                </div>
+
+                <div class="p-4 border-b-4 border-yellow-500 rounded-lg bg-gray-800">
+                    <svg class="w-10 h-10 text-yellow-400 mx-auto mb-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 18h.01M8 21h8a2 2 0 002-2V5a2 2 0 00-2-2H8a2 2 0 00-2 2v14a2 2 0 002 2z"></path></svg>
+                    <p class="font-semibold text-white">EasyOCR</p>
+                    <p class="text-sm text-gray-400">Automatic Number Plate Recognition (ANPR).</p>
+                </div>
+
+                <div class="p-4 border-b-4 border-red-500 rounded-lg bg-gray-800">
+                    <svg class="w-10 h-10 text-red-400 mx-auto mb-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4"></path></svg>
+                    <p class="font-semibold text-white">Arduino</p>
+                    <p class="text-sm text-gray-400">Microcontroller for physical gate/sensor control.</p>
+                </div>
+
+                <div class="p-4 border-b-4 border-blue-500 rounded-lg bg-gray-800">
+                    <svg class="w-10 h-10 text-blue-400 mx-auto mb-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 7v10a2 2 0 002 2h14a2 2 0 002-2V9a2 2 0 00-2-2h-3m-6 4H8m4 0h3"></path></svg>
+                    <p class="font-semibold text-white">Mobile Webcam / IP</p>
+                    <p class="text-sm text-gray-400">Low-cost, accessible image acquisition hardware.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Scalability and Differentiator Section -->
+    <section id="scale" class="py-16 bg-gray-900/50 border-t border-b border-gray-800">
+        <div class="max-w-7xl mx-auto px-6">
+            <h3 class="text-3xl font-bold text-center text-white mb-4">The Scalability Advantage & Integrated Security</h3>
+            <p class="text-lg text-gray-400 text-center max-w-3xl mx-auto mb-12">
+                Our architecture is designed not just for high traffic but also for advanced monitoring and security.
+            </p>
+
+            <div class="grid md:grid-cols-2 gap-10">
+                <!-- Column 1: Decentralized Processing, Centralized Data (Scalability) -->
+                <div class="p-6 rounded-xl border border-teal-600 bg-gray-800/70">
+                    <h4 class="text-2xl font-bold text-white mb-4 flex items-center">
+                        <svg class="w-6 h-6 mr-2 text-teal-400" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path></svg>
+                        Massive Scaling: Decentralized & Cost-Effective
+                    </h4>
+                    <ul class="space-y-3 text-gray-400 list-disc list-inside">
+                        <li>**Low Cost:** Uses camera vision on existing license plates—no expensive RFID tags/readers are required (unlike FASTag).</li>
+                        <li>**Fast Local OCR:** The CPU-intensive ANPR processing happens locally at each lane (on a Raspberry Pi or Mini-PC), ensuring fast response times.</li>
+                        <li>**Scalable Database:** The core logic (parking records and capacity count) is moved from local Python dictionaries to a central, high-performance **Cloud Database**.</li>
+                        <li>**Unlimited Capacity:** Adding a new lane simply means adding one camera and one processing unit, all instantly sharing the global parking status.</li>
+                    </ul>
+                </div>
+
+                <!-- Column 2: New Feature: Gesture Detection for Safety & Security -->
+                <div class="p-6 rounded-xl border border-yellow-600 bg-gray-800/70">
+                    <h4 class="text-2xl font-bold text-white mb-4 flex items-center">
+                        <svg class="w-6 h-6 mr-2 text-yellow-400" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.75 17L9 20l-1 1h8l-1-1v-3m2-14h-10a2 2 0 00-2 2v2a2 2 0 002 2h10a2 2 0 002-2V5a2 2 0 00-2-2z"></path></svg>
+                        Integrated Safety & Security Monitoring
+                    </h4>
+                    <ul class="space-y-3 text-gray-400 list-disc list-inside">
+                        <li>**Gesture-Based Emergency:** The camera stream is continuously monitored for specific, pre-defined gestures (e.g., waving arms, distress signals).</li>
+                        <li>**Unusual Activity Detection:** Using **OpenCV**, the system detects erratic behavior, objects thrown over the barrier, or vehicles parked in non-designated areas.</li>
+                        <li>**Instant Alerts:** Upon detecting a suspicious gesture or activity, the system triggers an immediate alert to security staff via API, providing the exact camera location and timestamp.</li>
+                        <li>**Dual-Use Hardware:** The same low-cost camera used for ANPR is leveraged for 24/7 security monitoring, maximizing hardware efficiency.</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="py-6 text-center border-t border-gray-700 mt-8">
+        <p class="text-sm text-gray-500">
+            &copy; 2024 VisionPark - AI Driven Parking Automation. | Built for Innovation.
+        </p>
+    </footer>
+
+</body>
+</html>
