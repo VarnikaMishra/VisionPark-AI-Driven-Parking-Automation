@@ -1,10 +1,6 @@
 # VisionPark-AI-Driven-Parking-Automation
 This is my IOT, CV and ML integrated project. I have completed this project during my 1st year B.E degree.(in 2025)
 
-Based on the detailed and impressive HTML page you provided for VisionPark - AI Driven Parking Automation, here is a comprehensive and professional README file.
-
-This version incorporates the project's unique selling points (cost-effectiveness, scalability, integrated security) and the specific technology choices mentioned in your code (EasyOCR, Arduino, OpenCV).
-
 🚗 VisionPark: AI-Driven Parking Automation
 🌟 Project Overview
 VisionPark is a highly efficient, cost-effective, and infinitely scalable automated parking management system built specifically to address infrastructure challenges. It leverages low-cost hardware and open-source Computer Vision to provide a full-cycle solution for vehicle entry, automated access control, capacity management, and dynamic billing.
