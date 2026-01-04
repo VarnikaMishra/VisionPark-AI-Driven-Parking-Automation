@@ -1,5 +1,5 @@
 
-#Hardware Materials required to build a working real-life prototype for the project.
+# Hardware Materials required to build a working real-life prototype for the project.
 
 -----------------------------------------------------------------------------------
 ### Basic Materials for the Parking System:
