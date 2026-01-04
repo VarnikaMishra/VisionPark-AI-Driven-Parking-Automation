@@ -1,8 +1,8 @@
 
-Hardware Materials required to build a working real-life prototype for the project.
+#Hardware Materials required to build a working real-life prototype for the project.
 
 -----------------------------------------------------------------------------------
->>>> Basic Materials for the Parking System:
+### Basic Materials for the Parking System:
 
 1. Arduino UNO
 2. IR Sensors - 2pcs
@@ -13,10 +13,11 @@ Hardware Materials required to build a working real-life prototype for the proje
 6. Laptop to Arduino connector (wire)
 7. Plastic Barrigate for entry and exit - 1pc
 8. (Small mini Cars - Hotwheels or any other)
+9. LCD Screen to show output (optional)
 
 _____________________________________________________________________________________
 
->>>> Materials for the Energy generation demonstration:
+### Materials for the Energy generation demonstration:
 
 1. Phizoelectric Sensors (according to your parking size in the prototype
 2. Black and Red wires (for connecting sensors to bulb for energy generation demonstration)
