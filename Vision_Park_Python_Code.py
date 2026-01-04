@@ -2,7 +2,6 @@ import serial
 import time
 import requests
 from datetime import datetime
-# REMOVED: import pytesseract
 import easyocr
 import cv2
 import numpy as np
@@ -13,7 +12,7 @@ SERIAL_PORT = 'COM3'
 BAUD_RATE = 9600      # Must match Arduino's Serial.begin()
 
 # IP Webcam URL (change to your phone’s IP)
-CAMERA_URL = "http://172.20.10.3:8080/shot.jpg"
+CAMERA_URL = "http://123.45.67.:1234/shot.jpg"  #This is a random number - You can use IP Webcam to do this
 
 # --- EasyOCR Initialization ---
 # Initialize the EasyOCR Reader once. 
@@ -240,4 +239,5 @@ def parking_system():
             print("Serial connection closed.")
 
 if __name__ == "__main__":
+
     parking_system()
